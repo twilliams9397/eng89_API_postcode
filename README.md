@@ -68,7 +68,7 @@ def check_postcode():
     if check_response_postcode:
         response_dict = check_response_postcode.json()
         result_dict = response_dict['result']
-        return f"Your postcode is {result_dict['postcode']} and you live in {result_dict['parish']}"
+        return f"Your postcode is {result_dict['postcode']} and you live in {result_dict['parish']}, {result_dict['admin_district']}, {result_dict['country']}."
 
     else:
         return "Oops something went wrong, please try again later."
